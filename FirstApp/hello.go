@@ -1,3 +1,4 @@
+// para ejecutar se debe ejecutar go run hello.go
 package main
 
 import "fmt"
@@ -5,19 +6,6 @@ import "fmt"
 //variable declarada en scoope del package
 //no es buena practica tener demasiadas variables con scope global
 var variablez = "hola func numero"
-
-func main() {
-	//println recive una catidad variable de parametros ..interface{}
-	fmt.Println("hello world")
-
-	//operador de declaracion de variable corta
-	variablex := 2 + 4
-	variabley := 42
-	fmt.Println(variablex, variabley)
-	funcion1()
-	funcion2()
-	tiposString()
-}
 
 func funcion1() {
 	fmt.Println(variablez)
@@ -46,4 +34,41 @@ func tiposString() {
 	string1 := fmt.Sprint("El ", variabled, " dice hola mundo")
 	fmt.Println(string1)
 }
+
 //clase siguiente 13
+//creando variable con propio tipo de dato
+var a int
+
+type dinero int //creacion de un tipo de dato
+var b dinero    //declaracion de variable con tipo de dato creado
+
+func main() {
+	//println recive una catidad variable de parametros ..interface{}
+	fmt.Println("hello world")
+
+	fmt.Println("------------operador de asignacion corta y println recive cantidad variable de parametros")
+
+	//operador de declaracion de variable corta :=
+	variablex := 2 + 4
+	variabley := 42
+	fmt.Println(variablex, variabley)
+	funcion1()
+	funcion2()
+
+	fmt.Println("-------------tipo de datos y string")
+	tiposString()
+
+	fmt.Println("-------------creacion de un propio tipo de dato")
+	a = 42
+	fmt.Println(a)
+	fmt.Printf("%T\n", a)
+
+	b = 1000
+	fmt.Println(b)
+	fmt.Printf("%T\n", b)
+	//a = b no se puede asignar un tipo de datos diferente
+	//convercion de variable
+	a = int(b)
+	fmt.Println(a)
+	fmt.Printf("%T\n", a)
+}
