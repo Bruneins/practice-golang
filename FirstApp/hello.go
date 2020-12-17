@@ -3,6 +3,16 @@ package main
 
 import "fmt"
 
+/*Un TIPO de dato "primitivo" es uno que es construido internamente en el lenguaje o
+tipo de dato BÁSICO que es construido internamente en el lenguaje. *
+*/
+
+//nombres de paquetes short,consis and evocative
+
+//codigo de go idiomatico, escrito con los estandares puestos por la comunidad
+
+//para no usar el valor retornado por la una funcion se usa el _ underscore
+
 //variable declarada en scoope del package
 //no es buena practica tener demasiadas variables con scope global
 var variablez = "hola func numero"
